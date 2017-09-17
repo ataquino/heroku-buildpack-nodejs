@@ -58,7 +58,7 @@ install_nodejs() {
 install_go() {
   local version="$1"
   local dir="$2"
-  local url="https://storage.googleapis.com/golang/go$version.$platform.tar.gz"
+  local url="https://storage.googleapis.com/golang/go$version.linux-amd64.tar.gz"
   
   echo "Download and installing GO $version: $url"
   local code=$(curl "$url" -L --silent --fail --retry 5 --retry-max-time 15 -o /tmp/go.tar.gz --write-out "%{http_code}")
