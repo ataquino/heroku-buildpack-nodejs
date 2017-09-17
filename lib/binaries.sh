@@ -56,7 +56,7 @@ install_nodejs() {
 }
 
 install_go() {
-  local version=${1:1.9}
+  local version="$1"
   local dir="$2"
   local url="https://storage.googleapis.com/golang/go$version.$platform.tar.gz"
   
