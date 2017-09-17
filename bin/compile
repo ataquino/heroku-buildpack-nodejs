@@ -175,6 +175,9 @@ build_dependencies() {
   local cache_status="$(get_cache_status)"
   local start=$(nowms)
 
+  go get github.com/tools/godep
+  godep restore
+
   if $YARN; then
     yarn_node_modules "$BUILD_DIR"
   elif $PREBUILD; then
