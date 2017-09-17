@@ -178,6 +178,7 @@ build_dependencies() {
   go get -v github.com/tools/godep
   which go
   ls $BUILD_DIR/.heroku/go/bin
+  ls $BUILD_DIR/go/bin
   godep restore
 
   if $YARN; then
