@@ -60,7 +60,7 @@ install_go() {
   local dir="$2"
   local url="https://storage.googleapis.com/golang/go$version.$platform.tar.gz"
   
-  echo "Download and installing GO $version..."
+  echo "Download and installing GO $version: $url"
   local code=$(curl "$url" -L --silent --fail --retry 5 --retry-max-time 15 -o /tmp/go.tar.gz --write-out "%{http_code}")
   if [ "$code" != "200" ]; then
     echo "Unable to download GO: $code" && false
