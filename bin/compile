@@ -176,6 +176,7 @@ build_dependencies() {
   local start=$(nowms)
 
   go get -v github.com/tools/godep
+  which go
   godep restore
 
   if $YARN; then
