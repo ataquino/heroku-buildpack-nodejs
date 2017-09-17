@@ -63,4 +63,5 @@ write_export() {
   local build_dir="$2"
   echo "export PATH=\"$build_dir/.heroku/node/bin:$build_dir/.heroku/yarn/bin:\$PATH:$build_dir/node_modules/.bin\"" > $bp_dir/export
   echo "export NODE_HOME=\"$build_dir/.heroku/node\"" >> $bp_dir/export
+  echo "export GOPATH=\"$build_dir/.heroku/go\"" >> $bp_dir/export
 }
