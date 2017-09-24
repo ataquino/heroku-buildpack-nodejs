@@ -21,7 +21,6 @@ create_default_env() {
   export NODE_MODULES_CACHE=${NODE_MODULES_CACHE:-true}
   export NODE_ENV=${NODE_ENV:-production}
   export NODE_VERBOSE=${NODE_VERBOSE:-false}
-  export GOROOT="$HOME/.heroku/go"
 }
 
 list_node_config() {
@@ -62,6 +61,7 @@ write_profile() {
 write_export() {
   local bp_dir="$1"
   local build_dir="$2"
+  #echo "export GOROOT=\"$build_dir/.heroku/go\"" >> $bp_dir/export
   echo "export PATH=\"$build_dir/.heroku/go/bin:$build_dir/.heroku/node/bin:$build_dir/.heroku/yarn/bin:\$PATH:$build_dir/node_modules/.bin\"" > $bp_dir/export
   echo "export NODE_HOME=\"$build_dir/.heroku/node\"" >> $bp_dir/export
 }
