@@ -241,4 +241,4 @@ warn_no_start "$LOG_FILE"
 warn_unmet_dep "$LOG_FILE"
 warn_old_npm_lockfile $NPM_LOCK
 
-ls -la /app/go/bin
+ls -la /app/.heroku/go/bin
