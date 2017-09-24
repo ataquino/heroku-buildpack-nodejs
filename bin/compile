@@ -175,7 +175,7 @@ build_dependencies() {
   local cache_status="$(get_cache_status)"
   local start=$(nowms)
 
-  #go env GOPATH
+  go env GOPATH
   #go get -v github.com/tools/godep
   #which go
   #ls $BUILD_DIR/.heroku/go/bin
@@ -240,5 +240,3 @@ summarize_build | output "$LOG_FILE"
 warn_no_start "$LOG_FILE"
 warn_unmet_dep "$LOG_FILE"
 warn_old_npm_lockfile $NPM_LOCK
-
-ls -la /app/.heroku/go/bin
