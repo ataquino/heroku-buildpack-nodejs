@@ -59,7 +59,6 @@ install_go() {
   local version="$1"
   local dir="$2"
   local url="https://storage.googleapis.com/golang/go$version.linux-amd64.tar.gz"
-  echo $dir
 
   echo "Download and installing GO $version: $url"
   local code=$(curl "$url" -L --silent --fail --retry 5 --retry-max-time 15 -o /tmp/go.tar.gz --write-out "%{http_code}")
@@ -68,9 +67,7 @@ install_go() {
   fi
   tar xzf /tmp/go.tar.gz -C /tmp
   rm -rf $dir/*
-  ls /tmp/go
   mv /tmp/go/* $dir
-  ls $dir
   chmod +x $dir/bin/*
 }
 

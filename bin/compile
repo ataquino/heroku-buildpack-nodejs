@@ -175,10 +175,11 @@ build_dependencies() {
   local cache_status="$(get_cache_status)"
   local start=$(nowms)
 
+  go env GOPATH
   go get -v github.com/tools/godep
   which go
   ls $BUILD_DIR/.heroku/go/bin
-  ls $BUILD_DIR/go/bin
+  ls $HOME/.heroku/go/bin
   godep restore
 
   if $YARN; then
