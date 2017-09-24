@@ -67,6 +67,7 @@ install_go() {
   fi
   tar xzf /tmp/go.tar.gz -C /tmp
   rm -rf $dir/*
+  ls /tmp
   mv /tmp/go/* $dir
   chmod +x $dir/bin/*
 }
