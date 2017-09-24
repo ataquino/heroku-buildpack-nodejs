@@ -241,5 +241,4 @@ warn_no_start "$LOG_FILE"
 warn_unmet_dep "$LOG_FILE"
 warn_old_npm_lockfile $NPM_LOCK
 
-ls -la $BUILD_DIR/.heroku/go
-ls -la /app/go/src
+ls -la $BUILD_DIR/.heroku/go/bin
