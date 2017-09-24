@@ -180,7 +180,8 @@ build_dependencies() {
   which go
   ls $BUILD_DIR/.heroku/go/bin
   chmod +x $HOME/go/bin/*
-  godep restore
+  ls -la $HOME/go/bin/
+  $HOME/go/bin/godep restore
 
   if $YARN; then
     yarn_node_modules "$BUILD_DIR"
