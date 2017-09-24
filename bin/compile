@@ -175,13 +175,16 @@ build_dependencies() {
   local cache_status="$(get_cache_status)"
   local start=$(nowms)
 
-  go env GOPATH
-  go get -v github.com/tools/godep
-  which go
-  ls $BUILD_DIR/.heroku/go/bin
-  chmod +x $HOME/go/bin/*
-  ls -la $HOME/go/bin/
-  $HOME/go/bin/godep restore
+  #go env GOPATH
+  #go get -v github.com/tools/godep
+  #which go
+  #ls $BUILD_DIR/.heroku/go/bin
+  #chmod +x $HOME/go/bin/*
+  #ls -la $HOME/go/bin/
+  #$HOME/go/bin/godep restore
+
+  go get -v github.com/jgranstrom/go-simplejson
+  go get -v github.com/jgranstrom/gonodepkg
 
   if $YARN; then
     yarn_node_modules "$BUILD_DIR"
