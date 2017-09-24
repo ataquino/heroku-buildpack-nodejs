@@ -21,6 +21,7 @@ create_default_env() {
   export NODE_MODULES_CACHE=${NODE_MODULES_CACHE:-true}
   export NODE_ENV=${NODE_ENV:-production}
   export NODE_VERBOSE=${NODE_VERBOSE:-false}
+  export GOROOT="$HOME/.heroku/go"
 }
 
 list_node_config() {
