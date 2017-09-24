@@ -185,6 +185,7 @@ build_dependencies() {
 
   go get -v github.com/jgranstrom/go-simplejson
   go get -v github.com/jgranstrom/gonodepkg
+  go install github.com/jgranstrom/go-simplejson
 
   if $YARN; then
     yarn_node_modules "$BUILD_DIR"
@@ -241,4 +242,5 @@ warn_no_start "$LOG_FILE"
 warn_unmet_dep "$LOG_FILE"
 warn_old_npm_lockfile $NPM_LOCK
 
-ls -la $BUILD_DIR/.heroku/go/bin
+ls -la $BUILD_DIR/.heroku/gopath
+ls -la $BUILD_DIR/.heroku/gopath/bin
